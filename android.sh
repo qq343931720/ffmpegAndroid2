@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ### Describe Your Target Android Api or Architectures ###
-ANDROID_API_LEVEL="25"
+ANDROID_API_LEVEL="26"
 ARCH_LIST=("armv8a" "armv7a" "x86" "x86-64")
 
 
@@ -13,7 +13,6 @@ ENABLED_CONFIG="\
 		--enable-avformat \
 		--enable-avutil \
   		--enable-swscale \
-		--enable-swresample \
 		--enable-libdav1d \
     	--enable-demuxer=* \
 	 	--enable-encoder=mjpeg \
@@ -40,6 +39,7 @@ DISABLED_CONFIG="\
   		--disable-ffprobe \
 		--disable-doc \
 		--disable-symver \
+		--disable-swresample \
 		--disable-gpl "
 
 
